@@ -1,0 +1,19 @@
+{
+  "name": "kbs-spkk-graphql-be",
+  "version": "1.0.0",
+  "description": "A document management system for KBS Sistem Penilaian Kertas Kerja (SPKK). This repository is used as it's backend.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zaimanza/kbs-spkk-graphql-be.git"
+  },
+  "author": "manza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zaimanza/kbs-spkk-graphql-be/issues"
+  },
+  "homepage": "https://github.com/zaimanza/kbs-spkk-graphql-be#readme"
+}
