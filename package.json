@@ -4,7 +4,10 @@
   "description": "A document management system for KBS Sistem Penilaian Kertas Kerja (SPKK). This repository is used as it's backend.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "server": "nodemon app.js",
+    "client": "npm start --prefix client",
+    "dev": "npm run server"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,34 @@
   "bugs": {
     "url": "https://github.com/zaimanza/kbs-spkk-graphql-be/issues"
   },
-  "homepage": "https://github.com/zaimanza/kbs-spkk-graphql-be#readme"
+  "homepage": "https://github.com/zaimanza/kbs-spkk-graphql-be#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  },
+  "dependencies": {
+    "@graphql-tools/schema": "^8.3.13",
+    "apollo-server-core": "^3.8.1",
+    "apollo-server-express": "^3.8.1",
+    "aws-sdk": "^2.1145.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dataloader": "^2.1.0",
+    "dotenv": "^16.0.1",
+    "easygraphql-format-error": "^0.0.3",
+    "express": "^4.18.1",
+    "graphql": "^16.5.0",
+    "graphql-subscriptions": "^2.0.0",
+    "graphql-tools": "^8.2.11",
+    "http": "^0.0.1-security",
+    "jsonwebtoken": "^8.5.1",
+    "libphonenumber-js": "^1.10.6",
+    "lodash": "^4.17.21",
+    "mongoose": "^5.13.14",
+    "path": "^0.12.7",
+    "subscriptions-transport-ws": "^0.11.0",
+    "util": "^0.12.4",
+    "validator": "^13.7.0"
+  }
 }
