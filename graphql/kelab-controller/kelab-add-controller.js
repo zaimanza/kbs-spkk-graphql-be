@@ -17,6 +17,7 @@ type kelabRes {
     kelab_tel: String,
     kelab_email: String,
     kelab_password: String,
+    isMaster: Boolean,
 }
 
 extend type Mutation {

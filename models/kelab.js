@@ -11,9 +11,6 @@ const kelabSchema = new mongoose.Schema(
         kelab_password: { type: String, required: true },
         isMaster: { type: Boolean, required: true, default: false },
     },
-    {
-        timestamps: true,
-    }
 );
 
 module.exports = conn.dropgodb.model("Kelab", kelabSchema);
