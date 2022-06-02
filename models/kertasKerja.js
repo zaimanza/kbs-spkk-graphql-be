@@ -4,6 +4,7 @@ const conn = require("../middleware/connection");
 
 const kertasKerjaSchema = new mongoose.Schema(
     {
+        kelab_id: { type: String },
         nama_program: { type: String },
         pengarah_program: { type: String },
         kluster_program: { type: String },

@@ -3,6 +3,7 @@ const bcrypt = require("bcryptjs")
 
 exports.kertasKerjaAddSchema = `
 input kertasKerjaReq {
+    kelab_id: String!,
     nama_program: String!,
     pengarah_program: String!,
     kluster_program: String!,
@@ -15,6 +16,7 @@ input kertasKerjaReq {
 
 type kertasKerjaRes {
     _id: String,
+    kelab_id: String!,
     nama_program: String!,
     pengarah_program: String!,
     kluster_program: String!,
@@ -44,6 +46,7 @@ exports.kertasKerjaAddController = {
             try {
 
                 const newKertasKerja = new KertasKerja({
+                    kelab_id: kertasKerja.kelab_id,
                     nama_program: kertasKerja.nama_program,
                     pengarah_program: kertasKerja.pengarah_program,
                     kluster_program: kertasKerja.kluster_program,
