@@ -20,6 +20,11 @@ const {
     kelabController
 } = require("./kelab-controller/kelab-controller");
 
+const {
+    kertasKerjaSchema,
+    kertasKerjaController
+} = require("./kertas-kerja-controller/kertas-kerja-controller");
+
 const typeDefs = gql`
 input orderItemReq {
     name: String,
@@ -43,13 +48,15 @@ type orderItemRes {
  type Mutation {
      _empty: String 
   } 
-  
+
   ${kelabSchema}
+  ${kertasKerjaSchema}
  `;
 
 const resolvers = merge(
     {},
     kelabController,
+    kertasKerjaController,
 );
 
 const schema = makeExecutableSchema({
