@@ -16,15 +16,16 @@ input kertasKerjaReq {
 
 type kertasKerjaRes {
     _id: String,
-    kelab_id: String!,
-    nama_program: String!,
-    pengarah_program: String!,
-    kluster_program: String!,
-    tarikh_program: String!,
-    email_pengarah: String!,
-    nombor_matrik_pengarah: String!,
-    nombor_tel_pengarah: String!,
-    fakulti: String!,
+    kelab_id: String,
+    nama_program: String,
+    pengarah_program: String,
+    kluster_program: String,
+    tarikh_program: String,
+    email_pengarah: String,
+    nombor_matrik_pengarah: String,
+    nombor_tel_pengarah: String,
+    fakulti: String,
+    kertas_kerja_status: String,
 }
 
 extend type Mutation {

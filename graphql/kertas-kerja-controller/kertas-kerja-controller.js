@@ -22,12 +22,18 @@ const {
     masterKertasKerjaFindAllController
 } = require("./master-kertas-kerja-find-all-controller")
 
+const {
+    masterUpdateKertasKerjaOneSchema,
+    masterUpdateKertasKerjaOneController
+} = require("./master-update-kertas-kerja-one-controller")
+
 
 exports.kertasKerjaSchema = `
 ${kelabKertasKerjaFindAllSchema}
 ${kertasKerjaAddSchema}
 ${kertasKerjaFindOneByIdSchema}
 ${masterKertasKerjaFindAllSchema}
+${masterUpdateKertasKerjaOneSchema}
 
   `;
 
@@ -36,4 +42,5 @@ exports.kertasKerjaController = merge({},
     kertasKerjaAddController,
     kertasKerjaFindOneByIdController,
     masterKertasKerjaFindAllController,
+    masterUpdateKertasKerjaOneController,
 );

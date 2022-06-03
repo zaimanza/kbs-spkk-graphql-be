@@ -13,6 +13,7 @@ const kertasKerjaSchema = new mongoose.Schema(
         nombor_matrik_pengarah: { type: String },
         nombor_tel_pengarah: { type: String },
         fakulti: { type: String },
+        kertas_kerja_status: { type: String },
     },
 );
 
