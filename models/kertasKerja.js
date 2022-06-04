@@ -14,6 +14,8 @@ const kertasKerjaSchema = new mongoose.Schema(
         nombor_tel_pengarah: { type: String },
         fakulti: { type: String },
         kertas_kerja_status: { type: String },
+        s3_upload_url: { type: String },
+        komen: { type: String },
     },
 );
 

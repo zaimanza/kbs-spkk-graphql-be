@@ -12,6 +12,8 @@ input kertasKerjaReq {
     nombor_matrik_pengarah: String!,
     nombor_tel_pengarah: String!,
     fakulti: String!,
+    s3_upload_url:String,
+    komen: String,
 }
 
 type kertasKerjaRes {
@@ -26,6 +28,8 @@ type kertasKerjaRes {
     nombor_tel_pengarah: String,
     fakulti: String,
     kertas_kerja_status: String,
+    s3_upload_url:String,
+    komen: String,
 }
 
 extend type Mutation {
@@ -56,6 +60,7 @@ exports.kertasKerjaAddController = {
                     nombor_matrik_pengarah: kertasKerja.nombor_matrik_pengarah,
                     nombor_tel_pengarah: kertasKerja.nombor_tel_pengarah,
                     fakulti: kertasKerja.fakulti,
+                    s3_upload_url: kertasKerja.s3_upload_url,
                 })
 
                 console.log(newKertasKerja)
