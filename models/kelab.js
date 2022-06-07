@@ -10,6 +10,7 @@ const kelabSchema = new mongoose.Schema(
         kelab_email: { type: String },
         kelab_password: { type: String },
         isMaster: { type: Boolean, default: false },
+        s3_upload_url: { type: String },
     },
 );
 

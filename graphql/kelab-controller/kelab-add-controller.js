@@ -8,6 +8,7 @@ input kelabReq {
     kelab_tel: String!,
     kelab_email: String!,
     kelab_password: String!,
+    s3_upload_url:String,
 }
 
 type kelabRes {
@@ -18,6 +19,7 @@ type kelabRes {
     kelab_email: String,
     kelab_password: String,
     isMaster: Boolean,
+    s3_upload_url:String,
 }
 
 extend type Mutation {
@@ -44,6 +46,7 @@ exports.kelabAddController = {
                     kelab_tel: kelab.kelab_tel,
                     kelab_email: kelab.kelab_email,
                     kelab_password: kelab.kelab_password,
+                    s3_upload_url: kelab.s3_upload_url,
                     isMaster: false,
                 })
 
