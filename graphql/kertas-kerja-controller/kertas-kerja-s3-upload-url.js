@@ -16,7 +16,7 @@ exports.kertasKerjaS3UploadUrlController = {
             errorName
         }) => {
             try {
-                return generateUploadURL()
+                return await generateUploadURL()
 
             } catch (err) {
                 throw err;
