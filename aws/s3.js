@@ -23,6 +23,7 @@ const generateUploadURL = async () => {
         Bucket: bucketName,
         Key: imageName,
         Expires: 60,
+        ACL: 'authenticated-read',
         ContentType: 'application/pdf'
     })
 
