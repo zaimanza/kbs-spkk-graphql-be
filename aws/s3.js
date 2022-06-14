@@ -22,9 +22,7 @@ const generateUploadURL = async () => {
     const params = ({
         Bucket: bucketName,
         Key: imageName,
-        Expires: 60,
-        ACL: 'authenticated-read',
-        ContentType: 'application/pdf'
+        Expires: 60
     })
 
     const uploadURL = await s3.getSignedUrlPromise('putObject', params)
