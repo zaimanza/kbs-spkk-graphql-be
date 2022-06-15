@@ -28,8 +28,22 @@ const generateUploadURL = async () => {
     const uploadURL = await s3.getSignedUrlPromise('putObject', params)
     return uploadURL
 }
-
 exports.generateUploadURL = generateUploadURL;
+
+const generateUploadURLType = async ({ type }) => {
+    const rawBytes = await randomBytes(16)
+    const imageName = "products/" + rawBytes.toString('hex')
+
+    const params = ({
+        Bucket: bucketName,
+        Key: imageName + '.' + type,
+        Expires: 60,
+    })
+
+    const uploadURL = await s3.getSignedUrlPromise('putObject', params)
+    return uploadURL
+}
+exports.generateUploadURLType = generateUploadURLType;
 
 const deleteObjectFromURL = async (imageURL) => {
     console.log(imageURL)
